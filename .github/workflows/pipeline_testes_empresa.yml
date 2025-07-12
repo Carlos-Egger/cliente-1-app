@@ -1,0 +1,12 @@
+name: Pipeline de Testes com Template da Empresa
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  use-template:
+    uses: Carlos-Egger/empresa-pipelines/.github/workflows/template-testes.yml@main
+    with:
+      python-version: '3.11'
